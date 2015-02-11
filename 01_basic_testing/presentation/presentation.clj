@@ -141,8 +141,12 @@
                     [:li (tt "fixme-1.py") ": some broken functions which need fixing"]
                     [:li (tt "fixme-tricky.py") ": a single, harder example"]]
 
-                   [:p "Code: " (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/fixme-1/HANDOUT"
-                                        "here") "."]
+                   [:p "Run the tests with:"]
+                   (code "python fixme-1.py")
+                   [:p "All of the tests initially fail."]
+
+                   [:p "(Code: " (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/fixme-1/HANDOUT"
+                                        "here") ".)"]
                    ]]
 
                  ;; -- HERE --
