@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+
+                <!-- THEME now expected in head.html.
+                     <link rel="stylesheet" href="css/theme/default.css" id="theme">
+                  -->
+
+                <!-- Meta-content (title, meta, style). -->
+                <title>Introduction to Agile Development</title><meta content="Introduction to Agile Development" name="description" /><meta content="Nick Rothwell" name="author" /><link href="css/theme/sky.css" rel="stylesheet" type="text/css" />
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+                <!-- Pull in main content. -->
+                <div class="reveal"><div class="slides"><section><h3>Agile 101</h3><h4>Nick Rothwell</h4></section><section><section><h3>The Software Crisis</h3><img height="300" src="images/softwarecrisis.jpg" style="margin:10px; vertical-align:middle" /></section><section><h3>Failed and Overbudget Projects</h3><a href="http://en.wikipedia.org/wiki/List_of_failed_and_overbudget_custom_software_projects"><code>http://en.wikipedia.org/wiki/List_of_failed_and_overbudget_custom_software_projects</code></a></section><section><img height="480" src="images/business-plan-2007-05-14.png" style="margin:10px; vertical-align:middle" /></section></section><section><section><h3>Waterfall Model</h3><h4>(1956)</h4><img height="350" src="images/800px-Waterfall_model.svg.png" style="margin:10px; vertical-align:middle" /><ul><li>(Influenced by manufacturing and construction)</li></ul></section><section><h4>But...</h4><ul><li>Requirements change</li><li>Implementation is unknown</li></ul></section></section><section><section><h3>Agile Development</h3><img height="480" src="images/agile-model.png" style="margin:10px; vertical-align:middle" /></section><section><ul><li>Iterative, incremental and evolutionary</li><li>Efficient and face-to-face communication</li><li>Very short feedback loop and adaptation cycle</li><li>Adaptive vs. predictive</li></ul></section><section><h4>Agile Practices</h4><ul><li>Pair Programming</li><li>Test-Driven Development</li><li>Continuous Integration</li><li>Scrum Meetings</li><li>Sprint Cycles</li><li>Planning Poker</li><li>Refactoring</li><li>User Stories</li><li>...</li></ul></section><section><h4>Pair Programming</h4><img height="480" src="images/Pair_programming_1.jpg" style="margin:10px; vertical-align:middle" /><p>1 &#x00D7; Driver, 1 &#x00D7; Navigator</p></section><section><h4>Test-Driven Development</h4><img height="480" src="images/Test-driven_development.PNG" style="margin:10px; vertical-align:middle" /><p>Develop code by writing tests</p></section><section><h4>Types of Test</h4><ul><li>Unit Tests</li><li>Integration Tests</li><li>Visual Tests</li><li>GUI Tests</li><li>System (End-to-End) Tests</li><li>Acceptance Tests</li><li>Installation Tests</li><li>...</li><li>Regression Testing</li></ul></section><section><h4>Build a Test Suite</h4><ul><li>(Growing) collection of test cases</li><li>View the tests as specification</li><li>Writing the tests: debugging investment up front</li></ul></section><section><h4>Write the Tests First!</h4></section><section data-background="#FF8080"><h3>Write the Tests First!</h3></section></section><section><section><h3>Python: Documentation Strings</h3><pre><code class="html">def adder(x, y):
+    """
+    Add x and y.
+    """
+    return x + y</code></pre><pre><code class="html">&gt;&gt;&gt; adder.__doc__
+'\n    Add x and y.\n    '
+
+&gt;&gt;&gt; print len.__doc__
+len(object) -&gt; integer
+
+Return the number of items of a sequence or mapping.
+
+&gt;&gt;&gt; help(len)</code></pre></section><section><h3>DocTest</h3><h4>Testing with Documentation Strings</h4><pre><code class="html">def adder(x, y):
+    """
+    Add x and y.
+
+    &gt;&gt;&gt; adder(2, 2)
+    4
+    """
+    return x + y</code></pre><p>Sections starting with <span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">&gt;&gt;&gt;</span> are tested</p><pre><code class="html">&gt;&gt;&gt; import doctest
+&gt;&gt;&gt; doctest.testmod()
+TestResults(failed=0, attempted=1)
+
+&gt;&gt;&gt; help(doctest)</code></pre></section></section><section><section><h3>Exercise 1: FixMe</h3><ul><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-1.py</span>: some broken functions which need fixing</li><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-tricky.py</span>: a single, harder example</li></ul></section></section><section><section><h3>Exercise 2: ....</h3></section></section><section><section><h3>Exercise 3: ....</h3></section></section></div></div>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

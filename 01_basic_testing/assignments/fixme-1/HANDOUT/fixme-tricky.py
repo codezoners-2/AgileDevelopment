@@ -18,7 +18,7 @@ def not_bad(s):
     >>> not_bad('Notting Hill is pretty bad.')
     'Notting Hill is pretty bad.'
     """
-    return "IMPLEMENT ME!"
+    pass
 
 if __name__ == "__main__":
     import doctest
