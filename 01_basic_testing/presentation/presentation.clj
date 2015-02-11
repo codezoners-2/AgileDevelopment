@@ -141,7 +141,8 @@
                     [:li (tt "fixme-1.py") ": some broken functions which need fixing"]
                     [:li (tt "fixme-tricky.py") ": a single, harder example"]]
 
-                   ;; LINK: XXXX
+                   [:p "Code: " (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/fixme-1/HANDOUT"
+                                        "here") "."]
                    ]]
 
                  ;; -- HERE --
