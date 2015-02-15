@@ -64,7 +64,24 @@ Return the number of items of a sequence or mapping.
 &gt;&gt;&gt; doctest.testmod()
 TestResults(failed=0, attempted=1)
 
-&gt;&gt;&gt; help(doctest)</code></pre></section></section><section><section><h3>Exercise 1: FixMe</h3><ul><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-1.py</span>: some broken functions which need fixing</li><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-tricky.py</span>: a single, harder example</li></ul><p>Run the tests with:</p><pre><code class="html">python fixme-1.py</code></pre><p>All of the tests initially fail.</p><p>(Code: <a href="https://github.com/codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/fixme-1/HANDOUT">here</a>.)</p></section></section><section><section><h3>Exercise 2: ....</h3></section></section><section><section><h3>Exercise 3: ....</h3></section></section></div></div>
+&gt;&gt;&gt; help(doctest)</code></pre></section><section><h4>Invoking Tests</h4><p>Run DocTest from the file:</p><pre><code class="html">if __name__ == "__main__":
+    import doctest
+    doctest.testmod()</code></pre></section><section><p>Run DocTest from the command prompt:</p><pre><code class="html">python -m doctest myFile.py</code></pre><p>(Can also do <span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">python -m doctest -v ...</span> for verbose output</p></section></section><section><section><h3>Exercise 1: FixMe</h3><ul><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-1.py</span>: some broken functions which need fixing</li><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">fixme-tricky.py</span>: a single, harder example</li></ul><p>Run the tests with:</p><pre><code class="html">python fixme-1.py</code></pre><p>All of the tests initially fail.</p><p>(Code: <a href="https://github.com/codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/fixme-1/HANDOUT">here</a>.)</p></section></section><section><section><h3>Test Coverage</h3><p>It is possible for all tests to pass even if the code is buggy.</p><ul><li>Not all functions in the code have been tested</li><li>Not all paths through the code have been tested</li><li>Edge cases have not been tested</li></ul></section><section><h4>Incomplete Coverage</h4><p>Incomplete path coverage</p><pre><code class="html">def biggest(a, b):
+    """
+    &gt;&gt;&gt; biggest(4, 12)
+    4
+    """
+    if a &gt; b:
+        return a
+    else:
+        return a</code></pre></section><section><p>Edge cases</p><pre><code class="html">def average(list):
+    """
+    &gt;&gt;&gt; average([1, 2, 3])
+    2
+    """
+    total = 0
+    for i in list: total = total + i
+    return total / len(list)</code></pre></section><section><h3>Exercise 2: Coverage</h3><ul><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">coverage.py</span>: buggy code, but all the tests pass</li><li>Fix the tests and the code (in that order!)</li><li>Pair-program!</li><ul><li>Person A implements new test(s)</li><li>Person B fixes code to pass test(s)</li><li>Swap over</li></ul></ul></section></section><section><section><h3>Test-Driven Development</h3><ul><li>Develop code in small steps</li><li>At each step, write a <strong>test which fails</strong></li><li>Swap driver/navigator</li><li>Write code to make the test pass</li></ul></section></section><section><section><h3>Exercise 3: TDD</h3><h4>Full-on Test Driven Development</h4><p>In each case, implement a test for each development stage</p><ul><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">make_bricks.py</span></li><li><span style="font-family:monospace; background-color:rgba(150, 150, 150, 0.5); padding: 0px 5px;">make_chocolate.py</span></li></ul><p>(Thanks to <a href="http://codingbat.com"><code>http://codingbat.com</code></a>.)</p></section></section></div></div>
 
 		<script>
 

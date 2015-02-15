@@ -131,7 +131,21 @@
 
                    [:p "Sections starting with " (tt ">>>") " are tested"]
 
-                   (include-code "import-doctest.py")]]
+                   (include-code "import-doctest.py")]
+
+                  [:section
+                   (subheading "Invoking Tests")
+
+                   [:p "Run DocTest from the file:"]
+                   (include-code "doctest-main.py")]
+
+                  [:section
+                   [:p "Run DocTest from the command prompt:"]
+
+                   (code "python -m doctest myFile.py")
+
+                   [:p "(Can also do " (tt "python -m doctest -v ...")
+                    " for verbose output"]]]
 
                  [:section
                   [:section
@@ -153,17 +167,81 @@
 
                  [:section
                   [:section
-                   (heading "Exercise 2: ....")
-                   ;; buggy code, but the tests actually work. Pairing: first person
-                   ;; adds a test to cause a failure, second person fixes the code, swap round.
+                   (heading "Test Coverage")
+
+                   [:p "It is possible for all tests to pass even if the code is buggy."]
+
+                   [:ul
+                    [:li "Not all functions in the code have been tested"]
+                    [:li "Not all paths through the code have been tested"]
+                    [:li "Edge cases have not been tested"]]]
+
+                  [:section
+                   (subheading "Incomplete Coverage")
+
+                   [:p "Incomplete path coverage"]
+                   (include-code "path-coverage.py")]
+
+                  [:section
+                   [:p "Edge cases"]
+
+                   (include-code "edge-cases.py")
+                   ]
+
+                  [:section
+                   (heading "Exercise 2: Coverage")
+
+                   [:ul
+                    [:li (tt "coverage.py") ": buggy code, but all the tests pass"]
+                    [:li "Fix the tests and the code (in that order!)"]
+                    [:li "Pair-program!"]
+
+                    [:ul
+                     [:li "Person A implements new test(s)"]
+                     [:li "Person B fixes code to pass test(s)"]
+                     [:li "Swap over"]]]
+
+                   ;; factorial
+                   ;;
+                   ]]
+
+                 #_ [:section
+                  [:section
+                   (heading "More Python")
+                   (subheading "Formatting")
+                   ;; Introduce string formatting.
+                      ]]
+
+                 [:section
+                  [:section
+                   (heading "Test-Driven Development")
+
+                   [:ul
+                    [:li "Develop code in small steps"]
+                    [:li "At each step, write a " [:strong "test which fails"]]
+                    [:li "Swap driver/navigator"]
+                    [:li "Write code to make the test pass"]]
+
                    ]]
 
                  [:section
                   [:section
-                   (heading "Exercise 3: ....")
+                   (heading "Exercise 3: TDD")
+
+                   (subheading "Full-on Test Driven Development")
+
+                   [:p "In each case, implement a test for each development stage"]
+
+                   [:ul
+                    [:li (tt "make_bricks.py")]
+                    [:li (tt "make_chocolate.py")]]
+
+                   [:p "(Thanks to " (link "http://codingbat.com") ".)"]
+
                    ;; Given stub functions and a spec. (i) implement tests for that spec,
                    ;; (ii) implement code. Multiple stages.
-                   ;;
+                   ;; triangle
+
                    ]]
 
 
