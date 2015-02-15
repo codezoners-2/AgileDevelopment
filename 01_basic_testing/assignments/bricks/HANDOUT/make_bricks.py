@@ -6,5 +6,5 @@ the given bricks. This is a little harder than it looks and can be done
 without any loops.
 """
 
-def make_bricks(numSmall, numLarge, length):
+def make_bricks(numSmall, numLarge, goal):
     return False
