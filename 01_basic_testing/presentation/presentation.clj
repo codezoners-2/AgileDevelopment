@@ -186,8 +186,9 @@
                    [:p "Edge cases"]
 
                    (include-code "edge-cases.py")
-                   ]
+                   ]]
 
+                 [:section
                   [:section
                    (heading "Exercise 2: Coverage")
 
@@ -200,6 +201,10 @@
                      [:li "Person A implements new test(s)"]
                      [:li "Person B fixes code to pass test(s)"]
                      [:li "Swap over"]]]
+
+                   [:p "(Code: " (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/coverage/HANDOUT"
+                                         "here") ".)"]
+
 
                    ;; factorial
                    ;;
@@ -233,8 +238,10 @@
                    [:p "In each case, implement a test for each development stage"]
 
                    [:ul
-                    [:li (tt "make_bricks.py")]
-                    [:li (tt "make_chocolate.py")]]
+                    [:li (tt "make_bricks.py")
+                     " (" (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/bricks/HANDOUT" "code") ")"]
+                    [:li (tt "make_chocolate.py")
+                     " (" (github "codezoners-2/AgileDevelopment/tree/master/01_basic_testing/assignments/chocolate/HANDOUT" "code") ")"]]
 
                    [:p "(Thanks to " (link "http://codingbat.com") ".)"]
 
