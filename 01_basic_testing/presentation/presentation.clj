@@ -231,6 +231,59 @@
 
                  [:section
                   [:section
+                   (heading "Interlude")
+                   (subheading "Positional and Keyword Arguments")
+
+                   [:p "Functions may take many parameters:"]
+
+                   (code "def my_fn(x, y, z, width, height, rotation, transform): ...")
+
+                   [:p "It can be hard to remember the order of the arguments."]
+
+                   (code "my_fn(0, 0, 10, 20, 10, 45, 0)")]
+
+                  [:section
+                   (subheading "Calling By Keyword")
+
+                   [:p "When calling a function, name the arguments:"]
+
+                   (code "my_fn(x=0, y=0, z=10, width=20, height=10, rotation=45, transform=0)")
+
+                   [:p "Keyword arguments can be in any order:"]
+
+                   (code "my_fn(width=20, height=10, x=0, ...)")
+                   ]
+
+                  [:section
+                   (subheading "Default Parameters")
+
+                   [:p "A function can have " [:strong "default parameters"]
+                    " which are optional when called:"]
+
+                   (code "def my_fn(x=0, y=0, z=0): ...")
+
+                   (code "my_fn() # same as my_fn(x=0, y=0, z=0)")
+
+                   (code "my_fn(z=10) # same as my_fn(x=0, y=0, z=10)")]
+
+                  [:section
+                   [:p "You can mix positional and keyword arguments in calls"
+                    " (but it's usually not a good idea)."]
+
+                   (code "my_fn(0, z=0, y=0, ...)")]
+
+                  [:section
+                   [:p "Not all parameters have to have default values:"]
+
+                   (code "def my_fn(x, y, z, rotation=0, transform=0): ...")
+                   (code "my_fn(0, 0, 10)")
+                   (code "my_fn(0, 0, 10, transform=-1)")
+
+                   [:p "(" (link "http://stupidpythonideas.blogspot.co.uk/2013/08/arguments-and-parameters.html")
+                    ")"]]]
+
+                 [:section
+                  [:section
                    (heading "Exercise 3: TDD")
 
                    (subheading "Full-on Test Driven Development")
@@ -249,7 +302,23 @@
                    ;; (ii) implement code. Multiple stages.
                    ;; triangle
 
-                   ]]
+                   ]
+
+                  [:section
+                   (subheading "Bonus Points")
+
+                   [:ul
+                    [:li "In both examples, how could you show the results graphically (in 'ASCII art')?"]
+                    [:li "How would you test this output?"]]]
+
+                  [:section
+                   [:ul
+                    [:li "Pair-program!"]
+
+                    [:ul
+                     [:li "Person A implements new test(s)"]
+                     [:li "Person B writes code to pass test(s)"]
+                     [:li "Swap over"]]]]]
 
 
 

@@ -17,7 +17,7 @@ def factorial(n):
 
 def stutter(string):
     """
-    Concatenate all substrings, so for 'ABC' return 'AABABC'.
+    Concatenate all prefix substrings, so for 'ABC' return 'AABABC'.
 
     >>> stutter('A')
     'A'
@@ -31,6 +31,8 @@ def stutter(string):
 
 def lastItem(string):
     """
+    Return the last character in the string.
+
     >>> lastItem("Foo Bar Bazz")
     'z'
     """

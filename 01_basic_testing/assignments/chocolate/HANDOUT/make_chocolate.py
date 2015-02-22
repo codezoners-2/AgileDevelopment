@@ -6,5 +6,5 @@ bars. Return -1 if it can't be done.
 
 """
 
-def make_chocolate(numSmall, numLarge, goal):
+def make_chocolate(num_small, num_large, goal):
     return -1
